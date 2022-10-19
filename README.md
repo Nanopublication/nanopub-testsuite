@@ -1,4 +1,4 @@
-# ✅ Nanopublication Test Suite
+# ☑️ Nanopublication Test Suite
 
 A test suite for Trusty URIs and Nanopublication implementations
 
