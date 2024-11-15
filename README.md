@@ -12,3 +12,5 @@ A test suite for Trusty URIs and Nanopublication implementations
 
 * Java: https://github.com/Nanopublication/nanopub-java
 * Python: https://github.com/fair-workflows/nanopub
+* JavaScript: https://github.com/nanopublication/nanopub-js
+* Rust/multi: https://vemonet.github.io/nanopub-rs/
