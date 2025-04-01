@@ -1,0 +1,60 @@
+@prefix this: <https://w3id.org/np/RAwToTy-lTyJDU9SkYryUp9yjrQx-rokX_M4sz85MQpmA> .
+@prefix sub: <https://w3id.org/np/RAwToTy-lTyJDU9SkYryUp9yjrQx-rokX_M4sz85MQpmA#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <https://github.com/knowledgepixels/fdo-demo/raw/main/fdo-examples/abc-demo-table/abc-demo-table.csv>
+    <https://w3id.org/fdof/ontology#hasEncodingFormat> <https://iana.org/assignments/media-types/text/csv>;
+    <https://w3id.org/fdof/ontology#materializes> sub:abc-table .
+  
+  <https://github.com/knowledgepixels/fdo-demo/raw/main/fdo-examples/abc-demo-table/abc-demo-table.xlsx>
+    <https://w3id.org/fdof/ontology#hasEncodingFormat> <https://iana.org/assignments/media-types/application/vnd.ms-excel>;
+    <https://w3id.org/fdof/ontology#materializes> sub:abc-table .
+  
+  sub:abc-table a <https://w3id.org/fdof/ontology#FAIRDigitalObject>;
+    rdfs:label "ABC demo table";
+    <https://w3id.org/fdof/ontology#hasInformationObjectType> <https://w3id.org/fdof/types#Dataset>;
+    <https://w3id.org/fdof/ontology#hasMetadata> this: .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4Wj537OijfOWVtsHMznuXKISqBhtGDQZfdO6pbb4hg9EHMcUFGTLbWaPrP783PHv8HMAAPjvEkHLaOHMIknqhaIa5236lfBO3r+ljVdYBElBcLvROmwG+ZGtmPNZf7lMhI15xf5TfoaSa84AFRd5J2EXekK6PhaFQhRm1IpSYtwIDAQAB";
+    npx:hasSignature "osadbUQxwDYFqBsxqhHEYgWdEu1vVZgSIwjkNjp8AAqNKW7CSdPiTUdhEiqpr2XGUrxZqbYggg+JLuv4nSCyEtnOP5yK09YkABeOBzS6oD5FN4AZhfa+Ljl77/E5h6f1szaJo2nayLAnTQ9ouFhkYbTmUrt0xqyxI1h9FzGf+ec=";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234 .
+  
+  this: dct:created "2024-09-18T11:19:06.183Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:introduces sub:abc-table;
+    npx:supersedes <https://w3id.org/np/RAYoA93MB3r8lo-Dj2FWlazMQ9fq5HjTT0iiUbf6iiQRQ>;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    rdfs:label "FAIR Digital Object: ABC demo table";
+    nt:wasCreatedFromProvenanceTemplate ns1:RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM;
+    nt:wasCreatedFromPubinfoTemplate ns1:RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM,
+      ns1:RAh1gm83JiG5M6kDxXhaYT1l49nCzyrckMvTzcPn-iv90, ns1:RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RADQPVz2_GAPjL6tU8PiA010UNnsi7sjEEOOHLETgyzi8> .
+}
