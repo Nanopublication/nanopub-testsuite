@@ -1,0 +1,31 @@
+@prefix this: <http://purl.org/nanopub/temp/1363676470/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfg: <http://www.w3.org/2004/03/trix/rdfg-1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dce: <http://purl.org/dc/elements/1.1/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  this:assertion rdfs:comment "♡ \u202c \u13088 \u0FBF \u2028 \u05B8 \u0004 \u000D \u202E \u0394 \u219F \u13012 \u2A0C" .
+}
+
+this:provenance {
+  this:assertion prov:hadPrimarySource this:creator .
+}
+
+this:pubinfo {
+  this: dct:created "2025-04-11T13:05:16.788+02:00"^^xsd:dateTime;
+    dct:creator this:creator .
+}
