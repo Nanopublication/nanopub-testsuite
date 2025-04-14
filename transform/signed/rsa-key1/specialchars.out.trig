@@ -1,0 +1,33 @@
+@prefix this: <https://w3id.org/np/RAuFqWlU9rcguLPmx4158aZf9a-TcQFouQ4H5vpj9Ki1Y> .
+@prefix sub: <https://w3id.org/np/RAuFqWlU9rcguLPmx4158aZf9a-TcQFouQ4H5vpj9Ki1Y#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:assertion rdfs:comment """♡ ‬ ገ8 ྿   ָ   ‮ Δ ↟ ጁ2 ⨌""" .
+}
+
+sub:provenance {
+  sub:assertion prov:hadPrimarySource sub:creator .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3RHyHR7WWKBYevw1qK86B6RVzI7oKlvghqXvbpOAX1KueDE6Itru34HRhrVy4OMLCRQWBE3VXktKdbgOxD3vC4cIxz5LX+XOgGWzv5WKSjOfXu/yIeJrzsuIkyHvw7/tToGrE0itJ1wGylJv+YieizmGvNiUHhP0J0+YFMNnvewIDAQAB";
+    npx:hasSignature "YiisyUARelLIPqwvyYqGkygdXaQQeDgq3IJbrF6S07tux7Wk8bD33o3l2js3WZKux4LCBHdN26EQg+E6b9zJA/N0lG7nvVvUpDSBItlMaZh4IvRhBZEglSRceIAk9fW3SImRSC9A5vcC6SEm4IoE63w7WCbUDmmf4HF3uW6mqkk=";
+    npx:hasSignatureTarget this: .
+  
+  this: dct:created "2025-04-11T13:05:16.788+02:00"^^xsd:dateTime;
+    dct:creator sub:creator .
+}
