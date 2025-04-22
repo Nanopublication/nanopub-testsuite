@@ -1,0 +1,30 @@
+@prefix this: <http://purl.org/nanopub/temp/1601763780/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  orcid:0000-0002-1267-0234 npx:retracts <http://purl.org/np/RARv1-bZWsdvQs88TDH2trcwNoGF1g5AawE2sPKeh5K_0> .
+}
+
+this:provenance {
+  this:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+this:pubinfo {
+  this: dct:created "2020-07-08T14:32:30.248+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAvySE8-JDPqaPnm_XShAa-aVuDZ2iW2z7Oc1Q9cfvxZE> .
+}

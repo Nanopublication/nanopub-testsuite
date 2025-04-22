@@ -1,0 +1,50 @@
+@prefix this: <https://w3id.org/np/RAfkFebpmz0EzVHchrrZRJbmrKegwF3XmySP-J2dBkX08> .
+@prefix sub: <https://w3id.org/np/RAfkFebpmz0EzVHchrrZRJbmrKegwF3XmySP-J2dBkX08/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns2: <http://purl.org/net/p-plan#> .
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ns3: <http://purl.org/spar/pwo/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubInfo .
+}
+
+sub:assertion {
+  <http://purl.org/np/RA5D8NzM2OXPZAWNlADQ8hZdVu1k0HnmVmgl20apjhU8M#step> ns2:isStepOfPlan
+      sub:plan .
+  
+  <http://purl.org/np/RACLlhNijmCk4AX_2PuoBPHKfY1T6jieGaUPVFv-fWCAg#step> ns2:isStepOfPlan
+      sub:plan;
+    ns1:precedes <http://purl.org/np/RANBLu3UN2ngnjY5Hzrn7S5GpqFdz8_BBy92bDlt991X4#step> .
+  
+  <http://purl.org/np/RANBLu3UN2ngnjY5Hzrn7S5GpqFdz8_BBy92bDlt991X4#step> ns2:isStepOfPlan
+      sub:plan;
+    ns1:precedes <http://purl.org/np/RA5D8NzM2OXPZAWNlADQ8hZdVu1k0HnmVmgl20apjhU8M#step> .
+  
+  sub:plan a ns2:Plan;
+    dcterms:description "This is a test workflow.";
+    ns3:hasFirstStep <http://purl.org/np/RACLlhNijmCk4AX_2PuoBPHKfY1T6jieGaUPVFv-fWCAg#step>;
+    rdfs:label "Test workflow" .
+}
+
+sub:provenance {
+  sub:assertion prov:generatedAtTime "2020-10-27T10:46:36.512175"^^xsd:dateTime .
+}
+
+sub:pubInfo {
+  this: npx:introduces sub:plan;
+    prov:generatedAtTime "2020-10-27T10:46:36.512175"^^xsd:dateTime .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3RHyHR7WWKBYevw1qK86B6RVzI7oKlvghqXvbpOAX1KueDE6Itru34HRhrVy4OMLCRQWBE3VXktKdbgOxD3vC4cIxz5LX+XOgGWzv5WKSjOfXu/yIeJrzsuIkyHvw7/tToGrE0itJ1wGylJv+YieizmGvNiUHhP0J0+YFMNnvewIDAQAB";
+    npx:hasSignature "R241kIES69Nz2EOTJ1LQC69KvelWbcyYlYQjY9UjwlaOJ70kvyaj2Ikpl2dXNyUqlgG2NtFwQThCRRlnvnxlZpmjhcArbYN6kM4u5vpKKVzTdZ6rwqgI2zFeGOnEDnXu6I7BVz6QTK0p5qeu3mDrPOzLKDXm+D0BZOIRzmHkzZs=";
+    npx:hasSignatureTarget this: .
+}

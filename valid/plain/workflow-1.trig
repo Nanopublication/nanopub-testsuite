@@ -1,0 +1,44 @@
+@prefix this: <http://purl.org/nanopub/temp/155322900/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#> .
+@prefix ns2: <http://purl.org/net/p-plan#> .
+@prefix ns3: <http://purl.org/spar/pwo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubInfo .
+}
+
+this:assertion {
+  this:plan a ns2:Plan;
+    dcterms:description "This is a test workflow.";
+    ns3:hasFirstStep <http://purl.org/np/RACLlhNijmCk4AX_2PuoBPHKfY1T6jieGaUPVFv-fWCAg#step>;
+    rdfs:label "Test workflow" .
+  
+  <http://purl.org/np/RA5D8NzM2OXPZAWNlADQ8hZdVu1k0HnmVmgl20apjhU8M#step> ns2:isStepOfPlan
+      this:plan .
+  
+  <http://purl.org/np/RACLlhNijmCk4AX_2PuoBPHKfY1T6jieGaUPVFv-fWCAg#step> ns2:isStepOfPlan
+      this:plan;
+    ns1:precedes <http://purl.org/np/RANBLu3UN2ngnjY5Hzrn7S5GpqFdz8_BBy92bDlt991X4#step> .
+  
+  <http://purl.org/np/RANBLu3UN2ngnjY5Hzrn7S5GpqFdz8_BBy92bDlt991X4#step> ns2:isStepOfPlan
+      this:plan;
+    ns1:precedes <http://purl.org/np/RA5D8NzM2OXPZAWNlADQ8hZdVu1k0HnmVmgl20apjhU8M#step> .
+}
+
+this:provenance {
+  this:assertion prov:generatedAtTime "2020-10-27T10:46:36.512175"^^xsd:dateTime .
+}
+
+this:pubInfo {
+  this: npx:introduces this:plan;
+    prov:generatedAtTime "2020-10-27T10:46:36.512175"^^xsd:dateTime .
+}

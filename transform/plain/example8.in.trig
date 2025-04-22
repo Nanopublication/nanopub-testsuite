@@ -1,0 +1,53 @@
+@prefix this: <http://purl.org/nanopub/temp/502187612/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  this:abc-table a <https://w3id.org/fdof/ontology#FAIRDigitalObject>;
+    rdfs:label "ABC demo table";
+    <https://w3id.org/fdof/ontology#hasInformationObjectType> <https://w3id.org/fdof/types#Dataset>;
+    <https://w3id.org/fdof/ontology#hasMetadata> this: .
+  
+  <https://github.com/knowledgepixels/fdo-demo/raw/main/fdo-examples/abc-demo-table/abc-demo-table.csv>
+    <https://w3id.org/fdof/ontology#hasEncodingFormat> <https://iana.org/assignments/media-types/text/csv>;
+    <https://w3id.org/fdof/ontology#materializes> this:abc-table .
+  
+  <https://github.com/knowledgepixels/fdo-demo/raw/main/fdo-examples/abc-demo-table/abc-demo-table.xlsx>
+    <https://w3id.org/fdof/ontology#hasEncodingFormat> <https://iana.org/assignments/media-types/application/vnd.ms-excel>;
+    <https://w3id.org/fdof/ontology#materializes> this:abc-table .
+}
+
+this:provenance {
+  this:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+this:pubinfo {
+  this: dct:created "2024-09-18T11:19:06.183Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:introduces this:abc-table;
+    npx:supersedes <https://w3id.org/np/RAYoA93MB3r8lo-Dj2FWlazMQ9fq5HjTT0iiUbf6iiQRQ>;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    rdfs:label "FAIR Digital Object: ABC demo table";
+    nt:wasCreatedFromProvenanceTemplate ns1:RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM;
+    nt:wasCreatedFromPubinfoTemplate ns1:RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM,
+      ns1:RAh1gm83JiG5M6kDxXhaYT1l49nCzyrckMvTzcPn-iv90, ns1:RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RADQPVz2_GAPjL6tU8PiA010UNnsi7sjEEOOHLETgyzi8> .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+}

@@ -1,0 +1,38 @@
+@prefix this: <http://purl.org/nanopub/temp/1415188652/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  this:local dct:creator "McGuire, T.; Moutier, C.; Downs, N.; Zisook, S.";
+    dct:date "2013";
+    dct:identifier <http://doi.org/10.1016/j.genhosppsych.2013.02.002>;
+    dct:title "In response to \"Details on suicide among US physicians: data from the National Violent Death Reporting System\"";
+    dct:type fabio:PositionPaper;
+    sio:SIO_000277 <http://purl.org/np/RAcTAtn3uLHzpl9A6lWQkUk6jwH53-cBlDXzL70f53eus>,
+      <http://purl.org/np/RAt3jp0MnXmUvo6UnlOupHFj4ZVj40UQITg-Qy5WD9_GQ>;
+    prov:quotedText "finally as an acknowledgement of the significant rate of 300 to 400 annual physician suicides in the United States" .
+}
+
+this:provenance {
+  this:assertion prov:wasAttributedTo orcid:0000-0002-6007-4023 .
+}
+
+this:pubinfo {
+  this: dct:created "2020-04-30T00:07:02.805+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-6007-4023;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAqWlNPJt3Eb4HkmPCpjaiRHGCzKIZag6cBNMkG8nxu6I> .
+}

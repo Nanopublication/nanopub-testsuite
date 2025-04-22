@@ -1,0 +1,36 @@
+@prefix this: <http://purl.org/nanopub/temp/1660568238/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix fip: <https://w3id.org/fair/fip/terms/> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  this:DwC a fip:Available-FAIR-Enabling-Resource, fip:Data-schema, fip:FAIR-Enabling-Resource;
+    rdfs:comment "Darwin Core schema";
+    rdfs:label "Darwin Core" .
+}
+
+this:provenance {
+  this:assertion prov:wasAttributedTo orcid:0000-0001-8050-0299 .
+}
+
+this:pubinfo {
+  this: dct:created "2020-10-05T10:49:41.102+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0001-8050-0299;
+    npx:introduces this:DwC;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAHvHX5qjbdnYXsZWsRMO3KuFekGUFR6LuPjigZns9_VA> .
+}

@@ -1,0 +1,45 @@
+@prefix this: <https://w3id.org/np/RARJgNBifOu3PdPQ8Ise4lMdsUW4tRS9gScpgER-2BOYk> .
+@prefix sub: <https://w3id.org/np/RARJgNBifOu3PdPQ8Ise4lMdsUW4tRS9gScpgER-2BOYk/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix fip: <https://w3id.org/fair/fip/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:EduSocDL a fip:FAIR-Implementation-Community;
+    rdfs:comment "New research project trying to bring data on COVID-19 together from different discipline";
+    rdfs:label "Data Linking across Social and Educational Sciences on COVID-19";
+    rdfs:seeAlso <https://docs.google.com/document/d/1hV-XLoVBg11o0Tv7MuuO8ZmMDK8cXWoA-yxoXKjiFK0/edit#>;
+    fip:has-research-domain <http://purl.obolibrary.org/obo/NCIT_C17141>, <http://purl.obolibrary.org/obo/NCIT_C19199>,
+      <http://www.fairsharing.org/ontology/subject/SRAO_0000042> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-3517-8071 .
+}
+
+sub:pubinfo {
+  this: dct:created "2020-10-05T16:20:03.409+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0003-3517-8071;
+    npx:introduces sub:EduSocDL;
+    nt:wasCreatedFromProvenanceTemplate <http://purl.org/np/RANwQa4ICWS5SOjw7gp99nBpXBasapwtZF1fIM3H2gYTM>;
+    nt:wasCreatedFromPubinfoTemplate <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM>;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RALjGBdI-nfsJeGy2Me7G6ekE0jKeoM28TUDb36S8pCEg> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3RHyHR7WWKBYevw1qK86B6RVzI7oKlvghqXvbpOAX1KueDE6Itru34HRhrVy4OMLCRQWBE3VXktKdbgOxD3vC4cIxz5LX+XOgGWzv5WKSjOfXu/yIeJrzsuIkyHvw7/tToGrE0itJ1wGylJv+YieizmGvNiUHhP0J0+YFMNnvewIDAQAB";
+    npx:hasSignature "ztDuuX3iOB9qk9+Tm6rJdMGBHWrS89s4C2RK6PcSvBg26VYg+gjXvnmRW5SYlG9j0q6v84twj/3xzRcJCvc7waPWXxSzJ+tP3QKE/T3HgZk30X2KKZ67Py2u/TR7q5cIED5QwbR7syWWQY8yNV7K2Ukpyu/IdBm8i/OaR+O0Pws=";
+    npx:hasSignatureTarget this: .
+}

@@ -1,0 +1,46 @@
+@prefix this: <http://purl.org/nanopub/temp/1851101846/> .
+@prefix bpmn: <http://dkm.fbk.eu/index.php/BPMN2_Ontology#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix pplan: <http://purl.org/net/p-plan#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubInfo .
+}
+
+this:assertion {
+  this:a a "int", pplan:Variable .
+  
+  this:add_output1 a "int", pplan:Variable .
+  
+  this:b a "int", pplan:Variable .
+  
+  this:step a bpmn:ScriptTask, pplan:Step;
+    ns1:description """@mark_as_fairstep(label='add integers', is_script_task=True)
+def add(a: int, b: int) -> int:
+    \"\"\"
+    Computational step adding two ints together.
+    \"\"\"
+    return a + b
+""";
+    pplan:hasInputVar this:a, this:b;
+    pplan:hasOutputVar this:add_output1;
+    rdfs:label "add integers" .
+}
+
+this:provenance {
+  this:assertion prov:generatedAtTime "2020-12-29T16:54:20.582254"^^xsd:dateTime .
+}
+
+this:pubInfo {
+  this: npx:introduces this:step;
+    prov:generatedAtTime "2020-12-29T16:54:20.582254"^^xsd:dateTime;
+    prov:wasAttributedTo <https://orcid.org/0000-0000-0000-0000> .
+}

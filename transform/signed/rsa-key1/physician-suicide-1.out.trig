@@ -1,0 +1,44 @@
+@prefix this: <https://w3id.org/np/RAgV8Z-8W5ZSORYo1GSzthF7CX2meh5GriUTcNu0wA3yQ> .
+@prefix sub: <https://w3id.org/np/RAgV8Z-8W5ZSORYo1GSzthF7CX2meh5GriUTcNu0wA3yQ/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sio: <http://semanticscience.org/resource/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:local dct:creator "McGuire, T.; Moutier, C.; Downs, N.; Zisook, S.";
+    dct:date "2013";
+    dct:identifier <http://doi.org/10.1016/j.genhosppsych.2013.02.002>;
+    dct:title "In response to \"Details on suicide among US physicians: data from the National Violent Death Reporting System\"";
+    dct:type fabio:PositionPaper;
+    sio:SIO_000277 <http://purl.org/np/RAcTAtn3uLHzpl9A6lWQkUk6jwH53-cBlDXzL70f53eus>,
+      <http://purl.org/np/RAt3jp0MnXmUvo6UnlOupHFj4ZVj40UQITg-Qy5WD9_GQ>;
+    prov:quotedText "finally as an acknowledgement of the significant rate of 300 to 400 annual physician suicides in the United States" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-6007-4023 .
+}
+
+sub:pubinfo {
+  this: dct:created "2020-04-30T00:07:02.805+02:00"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-6007-4023;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAqWlNPJt3Eb4HkmPCpjaiRHGCzKIZag6cBNMkG8nxu6I> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD3RHyHR7WWKBYevw1qK86B6RVzI7oKlvghqXvbpOAX1KueDE6Itru34HRhrVy4OMLCRQWBE3VXktKdbgOxD3vC4cIxz5LX+XOgGWzv5WKSjOfXu/yIeJrzsuIkyHvw7/tToGrE0itJ1wGylJv+YieizmGvNiUHhP0J0+YFMNnvewIDAQAB";
+    npx:hasSignature "5U2d1aBSzT3qz39QFd3+kctc6VCbsDPy7HYlUdRIVfCxvFqFX4XEabfA5U/lvT7y+Y7Zdjn0+XJcEaBMEu/dI4DH/yrwGmIMcp6L4Sxuo76wIDoEPd7uhCGOc932lORIx7hPJoUgu5XITNWoRU1I2FvvTMAgBauz+O0U5E74xns=";
+    npx:hasSignatureTarget this: .
+}
