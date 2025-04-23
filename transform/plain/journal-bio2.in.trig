@@ -1,0 +1,64 @@
+@prefix this: <http://purl.org/nanopub/temp/660030343/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+this:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion this:assertion;
+    np:hasProvenance this:provenance;
+    np:hasPublicationInfo this:pubinfo .
+}
+
+this:assertion {
+  this:association a <https://w3id.org/biolink/vocab/OrganismTaxonToEnvironmentAssociation>;
+    <https://w3id.org/biolink/vocab/object> <http://purl.obolibrary.org/obo/ENVO_03400001>;
+    <https://w3id.org/biolink/vocab/predicate> <http://purl.obolibrary.org/obo/RO_0002303>;
+    <https://w3id.org/biolink/vocab/subject> this:taxon .
+  
+  this:taxon <https://w3id.org/kpxl/biodiv/terms/hasTaxonName> <https://www.checklistbank.org/dataset/9880/taxon/4Q478> .
+}
+
+this:provenance {
+  this:assertion dct:source <https://doi.org/10.21426/B613110396>;
+    <http://rs.tdwg.org/dwc/terms/basisOfRecord> <http://rs.tdwg.org/dwc/terms/Event>;
+    prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+this:pubinfo {
+  <http://purl.obolibrary.org/obo/ENVO_03400001> nt:hasLabelFromApi "area of alpine tundra - An area of tundra which is present in a region subject to alpine conditions." .
+  
+  <http://purl.obolibrary.org/obo/RO_0002303> nt:hasLabelFromApi "has habitat - x 'has habitat' y if and only if: x is an organism, y is a habitat, and y can sustain and allow the growth of a population of xs." .
+  
+  this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    dct:created "2025-04-14T11:22:06.089Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:isPartOf <https://doi.org/10.3897/BDJ.13.e148207>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>, <https://w3id.org/kpxl/pensoft/bdj/terms/BiodiversityDataJournalNanopub>;
+    npx:introduces this:association;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    <http://purl.org/ontology/bibo/authorList> this:author-list;
+    rdfs:label "Pterostichus (Parapterostichus) schaschli (Marseul, 1880) (species) - has habitat - area of alpine tundra";
+    prov:wasDerivedFrom <https://w3id.org/np/RA_Z3BKtzp8-r_2rlIpmu_q4LcZBSUJ3wFit7vr9ihztA>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RA2VjRiJ5AsNnPHDXuOqvsEJwTwqtj5rBb-OFkpPOzd9s;
+    nt:wasCreatedFromPubinfoTemplate ns1:RAdyqI6k07V5nAS82C6hvIDtNWk179EIV4DV-sLbOFKg4,
+      <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>, <https://w3id.org/np/RA16U9Wo30ObhrK1NzH7EsmVRiRtvEuEA_Dfc-u8WkUCA>,
+      <https://w3id.org/np/RA5R_qv3VsZIrDKd8Mr37x3HoKCsKkwN5tJVqgQsKhjTE>, <https://w3id.org/np/RARW4MsFkHuwjycNElvEVtuMjpf4yWDL10-0C5l2MqqRQ>,
+      <https://w3id.org/np/RA_JdI7pfDcyvEXLr_gper3h8egmNggeTqkJbyHrlMEdo>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate ns1:RAwy5ZloUugunk3gafYppW6MfZGQXD554XgHfCAFHH08k .
+  
+  this:author-list rdf:_1 orcid:0000-0002-4587-3476 .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  <https://www.checklistbank.org/dataset/9880/taxon/4Q478> nt:hasLabelFromApi "Pterostichus (Parapterostichus) schaschli (Marseul, 1880) (species)" .
+}

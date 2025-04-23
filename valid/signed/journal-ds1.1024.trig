@@ -1,0 +1,71 @@
+@prefix this: <https://w3id.org/kpxl/ios/ds/np/RAnLA9VQ9VRJiPGq5_C4xlszHbVu-t-pJCo3YDnsq51q8> .
+@prefix sub: <https://w3id.org/kpxl/ios/ds/np/RAnLA9VQ9VRJiPGq5_C4xlszHbVu-t-pJCo3YDnsq51q8/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2451-8492> dct:title "Data Science" .
+  
+  <https://doi.org/10.3233/DS-170001> dct:abstract """Computational manipulation of knowledge is an important, and often under-appreciated, aspect of biomedical Data Science. The first Data Science initiative from the US National Institutes of Health was entitled “Big Data to Knowledge (BD2K).” The main emphasis of the more than $200M allocated to that program has been on “Big Data;” the “Knowledge” component has largely been the implicit assumption that the work will lead to new biomedical knowledge. However, there is long-standing and highly productive work in computational knowledge representation and reasoning, and computational processing of knowledge has a role in the world of Data Science.
+
+Knowledge-based biomedical Data Science involves the design and implementation of computer systems that act as if they knew about biomedicine. There are many ways in which a computational approach might act as if it knew something: for example, it might be able to answer a natural language question about a biomedical topic, or pass an exam; it might be able to use existing biomedical knowledge to rank or evaluate hypotheses; it might explain or interpret data in light of prior knowledge, either in a Bayesian or other sort of framework. These are all examples of automated reasoning that act on computational representations of knowledge. After a brief survey of existing approaches to knowledge-based data science, this position paper argues that such research is ripe for expansion, and expanded application.""";
+    dct:date "2017-10-17";
+    dct:isPartOf <http://id.crossref.org/issn/2451-8492>;
+    dct:title "Knowledge-based biomedical Data Science";
+    a <http://purl.org/spar/fabio/PositionPaper> .
+  
+  orcid:0000-0003-1455-3370 <http://schema.org/affiliation> <https://ror.org/03wmf1y16>;
+    <http://schema.org/email> "Larry.Hunter@UCDenver.edu";
+    foaf:name "Lawrence E. Hunter" .
+  
+  <https://ror.org/03wmf1y16> foaf:name "Computational Bioscience, University of Colorado School of Medicine, Aurora, CO 80045, USA" .
+  
+  sub:author-list rdf:_1 orcid:0000-0003-1455-3370 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0003-1455-3370 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0003-1455-3370 foaf:name "Lawrence E. Hunter" .
+  
+  this: dct:created "2025-04-20T11:18:48.228Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <http://purl.org/spar/fabio/ScholarlyWork>, <https://w3id.org/kpxl/ios/ds/terms/DataScienceNanopub>;
+    npx:introduces <https://doi.org/10.3233/DS-170001>;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    <http://purl.org/ontology/bibo/authorList> sub:author-list;
+    rdfs:label "Article: Knowledge-based biomedical Data Science";
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
+      <https://w3id.org/np/RA16U9Wo30ObhrK1NzH7EsmVRiRtvEuEA_Dfc-u8WkUCA>, <https://w3id.org/np/RAYrlN4s93vVe9LGI-gmPLTb-QZGHKd0mxx8VxJ3XVhuw>,
+      <https://w3id.org/np/RAjvEpLZUE7rMoa8q6mWSsN6utJDp-5FmgO47YGsbgw3w>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA48p4Ct8tWL--rIc1Dcr2BcYpW_7X1pfuv_2LK3anolY> .
+  
+  sub:author-list rdf:_1 orcid:0000-0003-1455-3370 .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4Wj537OijfOWVtsHMznuXKISqBhtGDQZfdO6pbb4hg9EHMcUFGTLbWaPrP783PHv8HMAAPjvEkHLaOHMIknqhaIa5236lfBO3r+ljVdYBElBcLvROmwG+ZGtmPNZf7lMhI15xf5TfoaSa84AFRd5J2EXekK6PhaFQhRm1IpSYtwIDAQAB";
+    npx:hasSignature "tN+QVT4oipX38wUCvoEe5m9LqQa+AP/hpVFGDBASwkiqAvvHnkHgwCFL+kr9AetZwpOhxyp1cTGHF/xBzwAmdkzXedJiKLIiY3Qpl/QSEDOZeRa/MxsmxHkLWnbqBpY+O9lLOR98nfXgxxDkBCoPl4kuMzTW9jnsDOf07l7UEvg=";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234 .
+}

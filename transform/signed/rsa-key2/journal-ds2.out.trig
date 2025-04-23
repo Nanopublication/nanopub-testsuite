@@ -1,0 +1,70 @@
+@prefix this: <https://w3id.org/np/RA9wqyMxbGyHSbl-tBpC9tDD2Ru4TZPR2VPFOuqbE520I> .
+@prefix sub: <https://w3id.org/np/RA9wqyMxbGyHSbl-tBpC9tDD2Ru4TZPR2VPFOuqbE520I/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://id.crossref.org/issn/2451-8492> dct:title "Data Science" .
+  
+  <https://doi.org/10.3233/DS-170011> a <http://purl.org/spar/fabio/PositionPaper>;
+    dct:abstract "Artificial intelligence will play an increasingly more prominent role in scientific research ecosystems, and will become indispensable as more interdisciplinary science questions are tackled. While in recent years computers have propelled science by crunching through data and leading to a data science revolution, qualitatively different scientific advances will result from advanced intelligent technologies for crunching through knowledge and ideas. We propose seven principles for developing thoughtful artificial intelligence, which will turn intelligent systems into partners for scientists. We present a personal perspective on a research agenda for thoughtful artificial intelligence, and discuss its potential for data science and scientific discovery.";
+    dct:date "2017-10-19";
+    dct:isPartOf <http://id.crossref.org/issn/2451-8492>;
+    dct:title "Thoughtful artificial intelligence: Forging a new partnership for data science and scientific discovery" .
+  
+  orcid:0000-0001-8465-8341 <http://schema.org/affiliation> <https://ror.org/03taz7m60>;
+    <http://schema.org/email> "gil@isi.edu";
+    foaf:name "Yolanda Gil" .
+  
+  <https://ror.org/03taz7m60> foaf:name "Information Sciences Institute and Department of Computer Science, University of Southern California, Marina del Rey, CA, USA" .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-8465-8341 .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-8465-8341 .
+}
+
+sub:pubinfo {
+  orcid:0000-0001-8465-8341 foaf:name "Yolanda Gil" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: dct:created "2025-04-18T20:26:15.939Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <http://purl.org/spar/fabio/ScholarlyWork>, <https://w3id.org/kpxl/ios/ds/terms/DataScienceNanopub>;
+    npx:introduces <https://doi.org/10.3233/DS-170011>;
+    npx:supersedes <https://w3id.org/np/RAW8N0mSilCuTeFQKf1rhzXgrMGRAKZgEOJQhqWAAnCtg>;
+    npx:wasCreatedAt <https://nanodash.petapico.org/>;
+    <http://purl.org/ontology/bibo/authorList> sub:author-list;
+    rdfs:label "Article: Thoughtful artificial intelligence: Forging a new partnership for data science and scientific dis...";
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
+      <https://w3id.org/np/RA16U9Wo30ObhrK1NzH7EsmVRiRtvEuEA_Dfc-u8WkUCA>, <https://w3id.org/np/RAYrlN4s93vVe9LGI-gmPLTb-QZGHKd0mxx8VxJ3XVhuw>,
+      <https://w3id.org/np/RAjvEpLZUE7rMoa8q6mWSsN6utJDp-5FmgO47YGsbgw3w>, <https://w3id.org/np/RAoTD7udB2KtUuOuAe74tJi1t3VzK0DyWS7rYVAq1GRvw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RA48p4Ct8tWL--rIc1Dcr2BcYpW_7X1pfuv_2LK3anolY> .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-8465-8341 .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
+    npx:hasSignature "hOKe8SHYPOtPalfJ0ET1cOIfHQc6EYWNK840Inhcp6sPDBHKslGnLepmPT2owW6aB39SjuPHNOP2r6bnM94cf6VyQL4afpMWfkwJFO15bPf35QIqmRRjbRGe2o9W4dFVPFZPB8hldvGzchQAhYaMRqbWBr051ztUHfxkGXOFRxzcUSuNa+HVVTlLSHmncr8o91ZVJWmjgO8do1JHHF1BSn9BcdelS3eQm1K6YwEehpV9mDjT7L8ZEam6qcFIQY11oALddvzpyaDXUeP0yZpHmRt59rBf1SAQfL76MK9ylnjrM7Sn3OjLlULP5D/WM4gLznmErazeZnPwFxvjIR0/Tw==";
+    npx:hasSignatureTarget this: .
+}

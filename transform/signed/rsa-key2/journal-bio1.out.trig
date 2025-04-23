@@ -1,0 +1,70 @@
+@prefix this: <https://w3id.org/np/RAvpHp2tWK9L3YZ9-Qre74_lqhXe0TtjJzQOm1A2kxII0> .
+@prefix sub: <https://w3id.org/np/RAvpHp2tWK9L3YZ9-Qre74_lqhXe0TtjJzQOm1A2kxII0/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:association a <https://w3id.org/biolink/vocab/OrganismTaxonToOrganismTaxonAssociation>;
+    <https://w3id.org/biolink/vocab/object> sub:objtaxon;
+    <https://w3id.org/biolink/vocab/predicate> <http://purl.obolibrary.org/obo/RO_0008506>;
+    <https://w3id.org/biolink/vocab/subject> sub:subjtaxon .
+  
+  sub:objtaxon <https://w3id.org/kpxl/biodiv/terms/hasTaxonName> <https://www.checklistbank.org/dataset/9880/taxon/4Q478> .
+  
+  sub:subjtaxon <https://w3id.org/kpxl/biodiv/terms/hasTaxonName> <https://www.checklistbank.org/dataset/2169/taxon/2865065-s1> .
+}
+
+sub:provenance {
+  sub:assertion dct:source <https://doi.org/10.21426/B613110396>;
+    <http://rs.tdwg.org/dwc/terms/basisOfRecord> <http://rs.tdwg.org/dwc/terms/Event>;
+    prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  this: a <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>;
+    dct:created "2025-04-14T11:23:07.219Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:isPartOf <https://doi.org/10.3897/BDJ.13.e148207>;
+    dct:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType <https://w3id.org/kpxl/biodiv/terms/BiodivNanopub>, <https://w3id.org/kpxl/pensoft/bdj/terms/BiodiversityDataJournalNanopub>;
+    npx:introduces sub:association;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    <http://purl.org/ontology/bibo/authorList> sub:author-list;
+    rdfs:label "Nebria diaphana Daniel & Daniel, 1890 (species) - ecologically co-occurs with - Pterostichus (Parapterostichus) schaschli (Marseul, 1880) (species)";
+    prov:wasDerivedFrom <https://w3id.org/np/RABjzPA49LZTOegv3-vN-tW_RytSew6lel3YRkt9ERTUI>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RA2VjRiJ5AsNnPHDXuOqvsEJwTwqtj5rBb-OFkpPOzd9s;
+    nt:wasCreatedFromPubinfoTemplate ns1:RAdyqI6k07V5nAS82C6hvIDtNWk179EIV4DV-sLbOFKg4,
+      <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>, <https://w3id.org/np/RA16U9Wo30ObhrK1NzH7EsmVRiRtvEuEA_Dfc-u8WkUCA>,
+      <https://w3id.org/np/RA5R_qv3VsZIrDKd8Mr37x3HoKCsKkwN5tJVqgQsKhjTE>, <https://w3id.org/np/RARW4MsFkHuwjycNElvEVtuMjpf4yWDL10-0C5l2MqqRQ>,
+      <https://w3id.org/np/RA_JdI7pfDcyvEXLr_gper3h8egmNggeTqkJbyHrlMEdo>, <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI>;
+    nt:wasCreatedFromTemplate <https://w3id.org/np/RAThWJjWZQM4c1voesyeV-ID20eoTKbiM6h9t0DXsuTLs> .
+  
+  sub:author-list rdf:_1 orcid:0000-0002-4587-3476 .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
+    npx:hasSignature "oDbQJbQDQLBmOa3N/Cq1cmibxUT+8HcSxZ1QE/LHOPPnIp27MrYQG3X9SqNYjZzfCG8IFyYcvonzFsXV5NuYCpiIp+0O8hxnjG1oART2y4A/bl5lknYrziUdEOZhEyY9i6CpCud2z9+mSvefkM5Bmq8KIeAjuIscKD8qW1cay/pKK+EF7qc9ScBppTQP9a2anETNuGAplQlVcQrSLx8bIH86s9j3/DuA55yPSIXnLxbK7rvymqHlcFhFDnsUgJQOd1D1oUiD08rowan9+nZF+cFOy/w+3ZrUJL2bAAeRiy3FkmfYM/w/Tb1c6Ek5Qtf4/CsCyRCe08lsXDmme5Tmwg==";
+    npx:hasSignatureTarget this: .
+  
+  <https://www.checklistbank.org/dataset/2169/taxon/2865065-s1> nt:hasLabelFromApi "Nebria diaphana Daniel & Daniel, 1890 (species)" .
+  
+  <https://www.checklistbank.org/dataset/9880/taxon/4Q478> nt:hasLabelFromApi "Pterostichus (Parapterostichus) schaschli (Marseul, 1880) (species)" .
+}

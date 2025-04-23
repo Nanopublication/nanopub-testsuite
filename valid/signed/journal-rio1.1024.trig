@@ -1,0 +1,82 @@
+@prefix this: <https://w3id.org/kpxl/pensoft/rio/np/RAXgg_AZFl8D0SF1QJcv7DBjHGBFt17VzX7KGJOcLmY5Y> .
+@prefix sub: <https://w3id.org/kpxl/pensoft/rio/np/RAXgg_AZFl8D0SF1QJcv7DBjHGBFt17VzX7KGJOcLmY5Y#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix ns1: <http://purl.org/np/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  sub:spi a <https://w3id.org/linkflows/superpattern/terms/SuperPatternInstance>;
+    rdfs:label "reduced pressure by enemies in the non-native range increases performance of non-native species";
+    <https://w3id.org/linkflows/superpattern/terms/hasContextClass> <http://www.wikidata.org/entity/Q446911>;
+    <https://w3id.org/linkflows/superpattern/terms/hasObjectClass> <http://www.wikidata.org/entity/Q118945393>;
+    <https://w3id.org/linkflows/superpattern/terms/hasRelation> <https://w3id.org/linkflows/superpattern/terms/increases>;
+    <https://w3id.org/linkflows/superpattern/terms/hasSubjectClass> <https://w3id.org/kpxl/pensoft/rio/terms/reduced-pressure-by-enemies-in-the-non-native-range> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0001-9488-1870, orcid:0000-0002-5522-5632,
+      orcid:0000-0002-5633-2384, orcid:0000-0003-3328-4217, orcid:0000-0003-4240-9560 .
+}
+
+sub:pubinfo {
+  <http://www.wikidata.org/entity/Q118945393> nt:hasLabelFromApi "performance of non-native species - ecological concept" .
+  
+  <http://www.wikidata.org/entity/Q446911> nt:hasLabelFromApi "biological invasion - process in which organisms become established in a region where they previously did not exist and then rapidly expand their range" .
+  
+  orcid:0000-0001-9488-1870 foaf:name "Daniel Mietchen" .
+  
+  orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
+  
+  orcid:0000-0002-5522-5632 foaf:name "Tina Heger" .
+  
+  orcid:0000-0002-5633-2384 foaf:name "Camille Musseau" .
+  
+  orcid:0000-0003-3328-4217 foaf:name "Jonathan Jeschke" .
+  
+  orcid:0000-0003-4240-9560 foaf:name "Maud Bernard-Verdier" .
+  
+  sub:author-list rdf:_1 orcid:0000-0001-9488-1870;
+    rdf:_2 orcid:0000-0002-5522-5632 .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4Wj537OijfOWVtsHMznuXKISqBhtGDQZfdO6pbb4hg9EHMcUFGTLbWaPrP783PHv8HMAAPjvEkHLaOHMIknqhaIa5236lfBO3r+ljVdYBElBcLvROmwG+ZGtmPNZf7lMhI15xf5TfoaSa84AFRd5J2EXekK6PhaFQhRm1IpSYtwIDAQAB";
+    npx:hasSignature "OltiprPY/kzxp3n+7U87HenrfZh3ylQH+mwUSvM3IlurKHdEQa+TX4G1Ki54Rpt3GZgHECSBv0O9xDueFWi784dIFUupVOZhlnuRWwZHBAcWwUQip/76+VazIci91U+HL43f9qop81qbD2tAy1WxjJHR1f+f01gje5t4fpJZ5yI=";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234 .
+  
+  this: dct:created "2024-07-03T07:08:30.038Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    dct:isPartOf <https://doi.org/10.3897/rio.10.e107393>;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/>;
+    npx:hasNanopubType <https://w3id.org/kpxl/pensoft/rio/terms/RIOJournalNanopub>;
+    npx:introduces sub:spi;
+    npx:supersedes <https://w3id.org/kpxl/pensoft/rio/np/RAgbU0TIXDhvvwIIgMI1xNMfVRZUAYGFIbIpsWDrW3npU>;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    <http://purl.org/ontology/bibo/authorList> sub:author-list;
+    prov:wasDerivedFrom <https://w3id.org/np/RAYfo5rEg_nYTAGXWWC3wlS_ypsKa5VUhZIX6NciKnlSo>;
+    nt:wasCreatedFromProvenanceTemplate ns1:RAi6zZAwhaJ23Hzg4lIjlPir6Take3ZQp-lS9skfBEwfQ;
+    nt:wasCreatedFromPubinfoTemplate ns1:RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM,
+      ns1:RABngHbKpoJ3U9Nebc8mX_KUdv_vXw28EejqAyQya5zVA, ns1:RAh1gm83JiG5M6kDxXhaYT1l49nCzyrckMvTzcPn-iv90,
+      ns1:RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI, <https://w3id.org/np/RA5R_qv3VsZIrDKd8Mr37x3HoKCsKkwN5tJVqgQsKhjTE>,
+      <https://w3id.org/np/RAIabr2sRVJ-YOIwZRD__BVMJKnq3QtQw_mjLIGSACPAI>, <https://w3id.org/np/RA_JdI7pfDcyvEXLr_gper3h8egmNggeTqkJbyHrlMEdo>,
+      <https://w3id.org/np/RAoWx0AJvNw-WqkGgZO4k8udNCg6kMcGZARN3DgO_5TII>;
+    nt:wasCreatedFromTemplate ns1:RABf4z3vjQrAOkGQRHvW82MrZTqtAsGWU7C9W1niaMOPw .
+  
+  <https://w3id.org/kpxl/pensoft/rio/terms/reduced-pressure-by-enemies-in-the-non-native-range>
+    nt:hasLabelFromApi "reduced pressure by enemies in the non-native range - by Tobias Kuhn" .
+}
