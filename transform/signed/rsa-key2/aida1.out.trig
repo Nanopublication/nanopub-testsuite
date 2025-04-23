@@ -1,0 +1,35 @@
+@prefix this: <http://example.org/nanopub-validator-example/RAAP6QCdFZLzAmRB5D4C46rjQDgWEOSEFwLbI4IuyP5hU> .
+@prefix sub: <http://example.org/nanopub-validator-example/RAAP6QCdFZLzAmRB5D4C46rjQDgWEOSEFwLbI4IuyP5hU/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  sub:assertion a npx:UnderspecifiedAssertion;
+    npx:asSentence <http://purl.org/aida/Malaria+is+transmitted+by+mosquitoes.> .
+}
+
+sub:provenance {
+  sub:assertion prov:hadPrimarySource <http://dx.doi.org/10.3233/ISU-2010-0613> .
+}
+
+sub:pubinfo {
+  this: a npx:ExampleNanopub;
+    dc:created "2014-07-29T10:13:35+01:00"^^xsd:dateTime;
+    pav:createdBy <http://orcid.org/0000-0002-1267-0234> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
+    npx:hasSignature "bEBgCBjS1Yz0UiiIg0gdR8nErtUm7sn4bXkKkHanHahWuQALvkofs3t+hSIB30PTLGbgSW7eRTu7rjJ8Nc/ZKqK82nFMP4tPA6EFGzROUFLi7AV0UMWHWw6LRA1YfdTHdUA1Y1aQMDcvER4sxyMiQrXcr0vK2PAQ7FCfFKlYcZqKR06n/mrvt4bU8Gd72DURz8aIe1uUjRUKdPT5CPJO6WrDopGzFQkmCFfguwj9nwTrDw7NYd2YZvGT7TlpmeYRwwk1oQvHdl7ko6SBLBXBXJCBIXk40bkj3KPvFuK16++C61B/JNkMDENGoPeGww5COiJc/v2HMhg5YbpZsqZevA==";
+    npx:hasSignatureTarget this: .
+}

@@ -1,0 +1,36 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix this: <http://purl.org/np/RAxPdvy5RN-jyPOMcBNEsUEn2CPBtAa3W0Ct3tbID4PiM> .
+@prefix sub: <http://purl.org/np/RAxPdvy5RN-jyPOMcBNEsUEn2CPBtAa3W0Ct3tbID4PiM#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix pc: <http://purl.org/petapico/o/paperclub#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
+}
+
+sub:assertion {
+  orcid:0000-0002-4808-1845 pc:hasRead <https://doi.org/10.1038/s41586-019-1272-6> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-4808-1845 .
+}
+
+sub:pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9VJ6g6Y8PaaTxoGJX9Vfk04/RAikTrjFkAQMXyYQ7TFE/toJSzgJTIkHe3YjKzD8kuG3vg4chBwx7+RbVG44VQHPOUgcFlVdhixBKXXTwywWV6jOwytoHNorVEu/VOQJUMapNWvWeyxQOG4UZEoXW0X713tUMJJOOZKvZiWtGnQIDAQAB";
+    npx:hasSignature "UKTskn84k5OK+ul6Ex2vbO2RV7ND/IAgLsS9jks8yFJ+Ny5WAtsK3RCRuq+GYb1h1s9Gtrm/vms38HBMJJmSUfnVeuHrsuSAlOuUVWp63X6fKsKX3smPJ84xrzh4+l3UYuRWUD07We2jMZ2tTAFrZyVWi1P0Dne8pXcj7b/40dY=";
+    npx:hasSignatureTarget this: .
+  
+  this: dc:created "2020-02-26T14:11:20.453+01:00"^^xsd:dateTime;
+    dc:creator orcid:0000-0002-4808-1845;
+    nt:wasCreatedFromTemplate <http://purl.org/np/RAB0P5RNgHZbmgozBI9xO8RuX1WnTw7UcJe_k3kvYK3Zw> .
+}

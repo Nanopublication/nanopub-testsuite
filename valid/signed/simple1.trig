@@ -1,0 +1,35 @@
+@prefix this: <http://example.org/nanopub-validator-example/RArZHDDWzq3MYkBQ5FyWrhJJnfVYuE6Y9BmipJQVLLjNY> .
+@prefix sub: <http://example.org/nanopub-validator-example/RArZHDDWzq3MYkBQ5FyWrhJJnfVYuE6Y9BmipJQVLLjNY/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix ex: <http://example.org/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  ex:mosquito ex:transmits ex:malaria .
+}
+
+sub:provenance {
+  sub:assertion prov:hadPrimarySource <http://dx.doi.org/10.3233/ISU-2010-0613> .
+}
+
+sub:pubinfo {
+  this: a npx:ExampleNanopub;
+    dc:created "2014-07-24T18:05:11+01:00"^^xsd:dateTime;
+    pav:createdBy <http://orcid.org/0000-0002-1267-0234> .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
+    npx:hasSignature "OyNCZWHWVyFFxvZ5r5ENVcwRGaCYBH50fQY6DFZLpiCsuSqdkraLBBdu7s4pn9kBy4RJQDQigoJRu+1kxoEVPO/YfIqrGz43BwtSkZK6qrEEEsPvPOUIY4NYBYrVEBZxsCB4QiYJ7IYr6xarNohnnu5kUtGlA4YsH2bU6hLYku+91yLAkN9j7Sn57dI6K9eeBgJTLdDf+L1bOEOoVFSIk83C2I6QfFCxDPHb3FKZAfUnPsScKBj/RrBDNUPnVSpo63nFzBY05nD8xg6yWnCpNvwkpBDt+3OmCl4Xc27K5QTLHsKeJlRkVLUvgsRySD5BCx1GoMoT8XVeXBfSf8RaXQ==";
+    npx:hasSignatureTarget this: .
+}

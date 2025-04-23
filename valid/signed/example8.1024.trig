@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAR7wdfw9trX-4V5LnHGuXPXrNGTn4qFZKGs3MO_cwIHw> .
-@prefix sub: <https://w3id.org/np/RAR7wdfw9trX-4V5LnHGuXPXrNGTn4qFZKGs3MO_cwIHw/> .
+@prefix this: <https://w3id.org/np/RAwToTy-lTyJDU9SkYryUp9yjrQx-rokX_M4sz85MQpmA> .
+@prefix sub: <https://w3id.org/np/RAwToTy-lTyJDU9SkYryUp9yjrQx-rokX_M4sz85MQpmA#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix nt: <https://w3id.org/np/o/ntemplate/> .
@@ -12,10 +12,10 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 sub:Head {
-  this: a np:Nanopublication;
-    np:hasAssertion sub:assertion;
+  this: np:hasAssertion sub:assertion;
     np:hasProvenance sub:provenance;
-    np:hasPublicationInfo sub:pubinfo .
+    np:hasPublicationInfo sub:pubinfo;
+    a np:Nanopublication .
 }
 
 sub:assertion {
@@ -40,6 +40,12 @@ sub:provenance {
 sub:pubinfo {
   orcid:0000-0002-1267-0234 foaf:name "Tobias Kuhn" .
   
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQD4Wj537OijfOWVtsHMznuXKISqBhtGDQZfdO6pbb4hg9EHMcUFGTLbWaPrP783PHv8HMAAPjvEkHLaOHMIknqhaIa5236lfBO3r+ljVdYBElBcLvROmwG+ZGtmPNZf7lMhI15xf5TfoaSa84AFRd5J2EXekK6PhaFQhRm1IpSYtwIDAQAB";
+    npx:hasSignature "osadbUQxwDYFqBsxqhHEYgWdEu1vVZgSIwjkNjp8AAqNKW7CSdPiTUdhEiqpr2XGUrxZqbYggg+JLuv4nSCyEtnOP5yK09YkABeOBzS6oD5FN4AZhfa+Ljl77/E5h6f1szaJo2nayLAnTQ9ouFhkYbTmUrt0xqyxI1h9FzGf+ec=";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0002-1267-0234 .
+  
   this: dct:created "2024-09-18T11:19:06.183Z"^^xsd:dateTime;
     dct:creator orcid:0000-0002-1267-0234;
     dct:license <https://creativecommons.org/licenses/by/4.0/>;
@@ -51,9 +57,4 @@ sub:pubinfo {
     nt:wasCreatedFromPubinfoTemplate ns1:RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM,
       ns1:RAh1gm83JiG5M6kDxXhaYT1l49nCzyrckMvTzcPn-iv90, ns1:RAjpBMlw3owYhJUBo3DtsuDlXsNAJ8cnGeWAutDVjuAuI;
     nt:wasCreatedFromTemplate <https://w3id.org/np/RADQPVz2_GAPjL6tU8PiA010UNnsi7sjEEOOHLETgyzi8> .
-  
-  sub:sig npx:hasAlgorithm "RSA";
-    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
-    npx:hasSignature "M4q/b0OUzeM3kelSKniGtLC4DyrEbBiasbIjFS8Y0deUCUpHMMdBL38rfhYDwdcpJm37NUYtyjtRz29GpZWzqOCToqDtc+Zk9UzQmScgiTjz9cYW82s7LFiJ1ad1EQMBzwgDVb0heX07gp4ko0BjXMrvctUcDO8MszHbPgNyIQk+uBSXbgzC6PKGrlZtAaNPEvD2tr1lKMHPRjekd9+O3OT54LhHJZ+dHV11+Ybl/zad2sSevjVm0rh4NqK/6z8rtDiEbAPn46IF/xN5btWVghwGQiriFrAId4XIdhxBCSUlf6yKudai0+I4VMTawsKp/TyBySFdq29dOO92rVGQ/A==";
-    npx:hasSignatureTarget this: .
 }
