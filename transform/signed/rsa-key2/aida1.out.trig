@@ -1,5 +1,5 @@
-@prefix this: <http://example.org/nanopub-validator-example/RAAP6QCdFZLzAmRB5D4C46rjQDgWEOSEFwLbI4IuyP5hU> .
-@prefix sub: <http://example.org/nanopub-validator-example/RAAP6QCdFZLzAmRB5D4C46rjQDgWEOSEFwLbI4IuyP5hU/> .
+@prefix this: <http://example.org/nanopub-validator-example/RAbbLPcSQGMC7hR2BnQY-8ZAVG4pWhHNp1k8dsgU87TUQ> .
+@prefix sub: <http://example.org/nanopub-validator-example/RAbbLPcSQGMC7hR2BnQY-8ZAVG4pWhHNp1k8dsgU87TUQ/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix pav: <http://purl.org/pav/> .
 @prefix npx: <http://purl.org/nanopub/x/> .
@@ -30,6 +30,7 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
-    npx:hasSignature "bEBgCBjS1Yz0UiiIg0gdR8nErtUm7sn4bXkKkHanHahWuQALvkofs3t+hSIB30PTLGbgSW7eRTu7rjJ8Nc/ZKqK82nFMP4tPA6EFGzROUFLi7AV0UMWHWw6LRA1YfdTHdUA1Y1aQMDcvER4sxyMiQrXcr0vK2PAQ7FCfFKlYcZqKR06n/mrvt4bU8Gd72DURz8aIe1uUjRUKdPT5CPJO6WrDopGzFQkmCFfguwj9nwTrDw7NYd2YZvGT7TlpmeYRwwk1oQvHdl7ko6SBLBXBXJCBIXk40bkj3KPvFuK16++C61B/JNkMDENGoPeGww5COiJc/v2HMhg5YbpZsqZevA==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "msT3EG8N4+j/dOxMXR6Hn7BxkLzgNTmIxL0Ep1dH5w/boBgIHkj4hnrUaPQa5xwFa+q49LRm1k6VNoJxpVnXik1WJtYHYz1mXlTGtWcaqsYFPEQb7YLrSaaf7T1P6ibe5dh/lFzFecfvkuAknfTSPXOlkTcePPZ9OqBd8O4FUVVZdDHObmmxs/KM2qpJW1Ikd8v4xKluRXZZUiwJFP+4QOcfBlw5gxxRnieRZJh105XxuPA2gFzYLUsnBigErwjTcsuN08q7q1gOhZ/XztcWvrefQibPuCh22V2vwu7o4tX9jPBQL8Aj2DEb3S7l65SPsBV3TK4ZemItXf0yc7UlUQ==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://orcid.org/0000-0000-0000-0000> .
 }

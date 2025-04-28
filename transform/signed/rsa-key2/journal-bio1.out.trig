@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAvpHp2tWK9L3YZ9-Qre74_lqhXe0TtjJzQOm1A2kxII0> .
-@prefix sub: <https://w3id.org/np/RAvpHp2tWK9L3YZ9-Qre74_lqhXe0TtjJzQOm1A2kxII0/> .
+@prefix this: <https://w3id.org/np/RAnKBZs8_YAmMuFaky7XX0pmUOV0ii_biKn9XA-mx2S5c> .
+@prefix sub: <https://w3id.org/np/RAnKBZs8_YAmMuFaky7XX0pmUOV0ii_biKn9XA-mx2S5c/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -61,8 +61,9 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
-    npx:hasSignature "oDbQJbQDQLBmOa3N/Cq1cmibxUT+8HcSxZ1QE/LHOPPnIp27MrYQG3X9SqNYjZzfCG8IFyYcvonzFsXV5NuYCpiIp+0O8hxnjG1oART2y4A/bl5lknYrziUdEOZhEyY9i6CpCud2z9+mSvefkM5Bmq8KIeAjuIscKD8qW1cay/pKK+EF7qc9ScBppTQP9a2anETNuGAplQlVcQrSLx8bIH86s9j3/DuA55yPSIXnLxbK7rvymqHlcFhFDnsUgJQOd1D1oUiD08rowan9+nZF+cFOy/w+3ZrUJL2bAAeRiy3FkmfYM/w/Tb1c6Ek5Qtf4/CsCyRCe08lsXDmme5Tmwg==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "bJxOIe5ajz0qbMw4abSy43O+rN6kFr0iyvrB5GbPNiYDGtwQkD1tAKROa2xnlLeYuKQGXh4l6TXka6oK9gSHeIR4TYuurhpcoWvpIm9ebAPYEMDFYYU37ZDgoo2A8ZvsLClZG5B+TyownDa+uWaQ2iOK85QtAg/IOA33IC7NWRfnQF6aGoLsFSiwC/AQox+pKws8lDUYk7HLX7nhmu4BJWPs7nBFBPpDpXbAvN/85k440SJkUUDnzRrJmwYGo3QSrjzWxY2SbN/r8lbt3Q4uniO28RtBhcqwf3sI70qhxKS3Az6H7L6g+vVkWSxdXhPeGENFC+ZDhsm5HO0pmVrtMQ==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0000-0000-0000 .
   
   <https://www.checklistbank.org/dataset/2169/taxon/2865065-s1> nt:hasLabelFromApi "Nebria diaphana Daniel & Daniel, 1890 (species)" .
   

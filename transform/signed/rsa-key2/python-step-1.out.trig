@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAKoTWfHi9mI8DUrwB3W7IV5WOv5cEw9VpKMK1vhOmF4A> .
-@prefix sub: <https://w3id.org/np/RAKoTWfHi9mI8DUrwB3W7IV5WOv5cEw9VpKMK1vhOmF4A/> .
+@prefix this: <https://w3id.org/np/RAb7SZkK8v0-fz8DaLNGFJ4wuDw8t2n514oc6SGCgF4TA> .
+@prefix sub: <https://w3id.org/np/RAb7SZkK8v0-fz8DaLNGFJ4wuDw8t2n514oc6SGCgF4TA/> .
 @prefix bpmn: <http://dkm.fbk.eu/index.php/BPMN2_Ontology#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix npx: <http://purl.org/nanopub/x/> .
@@ -47,6 +47,7 @@ sub:pubInfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
-    npx:hasSignature "giBIr+zJLBoHeaJXSjekX6cECmyrfepLMOzPdUkvyLcpqITqRiinyUSGX4hL8OYRLOVn+KCpipeCi/qKJJvrXJcqdKHEOlg23+bExJFP2tvsumTneiP/kn15KV9TeZVYUhv6fyi+1wkVWMsvL8cr2kkC2Ce+rG0oTW/Ag3ircmznx95XjSyL4JPgLITreUDtLgS3PkPm9v2YwVmdyro3n2veAw41ThtSJuMrMipD1c8N6yh/e38y0MxwZwSmFQV14g7O+bi35UzE3Z/MfXm9ZjHOaaOpRFXtnr6+y6xBFTMSWzKuzvrtG3qrp+6+EkyCSEWd+wif85NMeQS77FvXVQ==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "c2+LqxAyJqRXWHcQIsQu6zAebmaURHNhv3A1UqQ7wSmvduX2IYIqaoxL2AcWa/WgtboGNlDdW49kHBEgs5Qa3g8dyRzc3vEuuZICWmiHFlpGDHP7DU9Peu0/32mW1Gn/805GG4ftWUigsAfQ9sGPDscGBZ4DuISQGVZMv/FzfJwRP9DCf1ndhIPeZvCw65ZIIGBPHsGZvfb6XhqRaokYfo62oOLgaCTnyOE7hsu6ook2udw8YdO8JPZGZlwfjUAIVVGj8McC10eXPlfb5pUQhQXN1dQPXqFYyruuRXsC518e14xcDqcLgxcEfRQ9qljlioSoD/B94/Xyrfozr1G9zA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy <https://orcid.org/0000-0000-0000-0000> .
 }

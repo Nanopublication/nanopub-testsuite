@@ -1,5 +1,5 @@
-@prefix this: <https://w3id.org/np/RAGgTfuVXwqcOtYt4I5O436vaUaE1RZOpTGmx3os9pgrY> .
-@prefix sub: <https://w3id.org/np/RAGgTfuVXwqcOtYt4I5O436vaUaE1RZOpTGmx3os9pgrY/> .
+@prefix this: <https://w3id.org/np/RApFHMmM3ZXYkyBRbUHJMFNxOh8oCYNuSwo9zsPQln_Ow> .
+@prefix sub: <https://w3id.org/np/RApFHMmM3ZXYkyBRbUHJMFNxOh8oCYNuSwo9zsPQln_Ow/> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -63,8 +63,9 @@ sub:pubinfo {
   
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
-    npx:hasSignature "P78KKlzOMdTx+wcElx2zrVju+tsnAz2VXw8KnEflOaa4TGWTQmAbvra9oBZu7uFqVuxsWkira37UaDacEpSwx4NmOV2IuQzVzMRhRfzvclBD19IoCCd8jU1XZXeSXa0XbcGSMpAiqkc4jQH3X8M25MzRqFqhVhW5eXriAUmeiw5RsDAhH7VVJoZruBE/Qh7K8ywr14/scs6IAO/PmMHhN5krgxIcyOGVW1tSnEZdtnb7GTQ5LDpOPrzTnrGIGRaLqDMncgHqoO4LEB7ZcRVE8fzx3QBLz3GDr4w8F0bfgbkHhExOmT9ROueqSY5iItUBrmpBR5EAhl8USdY4MG/gtg==";
-    npx:hasSignatureTarget this: .
+    npx:hasSignature "yI61a0ewHrDWznyuKC1JmoeO6vLd8ydG6VWOzxxsPonyPK1fLhNL/ahJsk39C277poAH9Y9DXAiXlEA2BAXxBeSvbEIS9n2quX5/zKjWsx/o90cZMpU6n5xx2trpO0/SWS4m4DfsEQXGehaMuVE1fjs91iyFwBM762viPmkj2IhrNVtgXaVb4PSlzdJtuyM7PN8wvaoAx4tR4A656YhV30hvjutyP6j0YD48GnF1YtxpsTOmWCThVP1P0PTJpuF2GC7V7pTIRBY3NwlSkAloKfeBdPFAfwYOH8est+orCp9BdMsxFM4uufqSoYdadJ/Dww+DTVNle8kDdqAmZzhKpA==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0000-0000-0000 .
   
   <https://www.checklistbank.org/dataset/9880/taxon/4Q478> nt:hasLabelFromApi "Pterostichus (Parapterostichus) schaschli (Marseul, 1880) (species)" .
 }
