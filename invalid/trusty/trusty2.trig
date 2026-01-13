@@ -1,0 +1,62 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix hycl: <http://purl.org/petapico/o/hycl#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix ns1: <http://schema.org/> .
+@prefix ns2: <http://purl.org/spar/cito/> .
+@prefix nt: <https://w3id.org/np/o/ntemplate/> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sub: <https://w3id.org/np/RA54f2f2ef2408bf88c12fbb8fd62844263ab83ef5c22/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+sub:Head {
+  <https://w3id.org/np/RA3QeEArKrJhMi5hGQJwjizvDEPKnaM2wME9iuKItk_nE> a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  <http://purl.org/aida/Quantum%20computing%20can%20provide%20polynomial%20to%20exponential%20speedups%20for%20computing%20graph%20properties%20essential%20to%20ecological%20network%20analysis.>
+    a hycl:AIDA-Sentence;
+    dcterms:isPartOf <https://w3id.org/np/RAvk9pmoZ2IberoDe7zUWV0bVithiy6CnbSG5y06YuKM0/quantum-computing-applications-for-biodiversity-re>;
+    ns2:obtainsSupportFrom <https://arxiv.org/abs/2504.03866>;
+    ns1:about <http://www.wikidata.org/entity/Q141488>, <http://www.wikidata.org/entity/Q17995793>,
+      <http://www.wikidata.org/entity/Q5333246> .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1784-2920 .
+}
+
+sub:pubinfo {
+  <http://www.wikidata.org/entity/Q141488> nt:hasLabelFromApi "graph theory" .
+
+  <http://www.wikidata.org/entity/Q17995793> nt:hasLabelFromApi "quantum computing" .
+
+  <http://www.wikidata.org/entity/Q5333246> nt:hasLabelFromApi "ecological network" .
+
+  orcid:0000-0002-1784-2920 foaf:name "Anne Fouilloux" .
+
+  <https://w3id.org/np/RA3QeEArKrJhMi5hGQJwjizvDEPKnaM2wME9iuKItk_nE> dcterms:created
+      "2026-01-06T19:45:50.615Z"^^xsd:dateTime;
+    dcterms:creator orcid:0000-0002-1784-2920;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
+    npx:hasNanopubType hycl:AIDA-Sentence, <http://purl.org/petapico/o/hycl>;
+    npx:introduces <http://purl.org/aida/Quantum%20computing%20can%20provide%20polynomial%20to%20exponential%20speedups%20for%20computing%20graph%20properties%20essential%20to%20ecological%20network%20analysis.>;
+    npx:wasCreatedAt <https://nanodash.knowledgepixels.com/>;
+    rdfs:label "AIDA sentence: Quantum computing can provide polynomial to exponential speedups for computing graph properties esse...";
+    nt:wasCreatedFromProvenanceTemplate <https://w3id.org/np/RA7lSq6MuK_TIC6JMSHvLtee3lpLoZDOqLJCLXevnrPoU>;
+    nt:wasCreatedFromPubinfoTemplate <https://w3id.org/np/RA0J4vUn_dekg-U1kK3AOEt02p9mT2WO03uGxLDec1jLw>,
+      <https://w3id.org/np/RAukAcWHRDlkqxk7H2XNSegc1WnHI569INvNr-xdptDGI> .
+
+  <https://w3id.org/np/RA3QeEArKrJhMi5hGQJwjizvDEPKnaM2wME9iuKItk_nE/sig> npx:hasAlgorithm
+      "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAosxbitQQzLXi1949Zd9JmSkGfYHHlj/CZZ7iiYs1TrZ5/Jk/wGA7kHEv7f9NtsinOdBo9EtHj/jgHE5W2Vv404JbOAY280PvH5Jns5ObWdVZmtHeCw0ZIdPEqNrurrEweKhzcTJW/YRpYWPwVPo47XyIW6IAcmx6gfdtmdPddMpplqExrP6G99ksXfXlZI0InQtZJRSGK5lYLLNzaofFtupPI5OAAGjooDyHijp0Ap2HIXH6WpO4S44cFPKU34pH2xhIY4/XT5DG1X5UoiVHs2Yoo30BHFudj/kAFwdzcy6Yh4tMDaB3ox6p7pi267d7n0y7kypC0Nt+hfgHQ1FpgwIDAQAB";
+    npx:hasSignature "KYF/dP41kSQZCfLp6DVmmIgTTwyCctCESCSZ64ceGoOSPbY3U9F4ODU58dcEE7B6LbBmTl5tiYouAM5xh+o+maMLZ6YZqN5tUyImNMKrq5/lqKr9gk40QFXB8NXrla8ISudPM35Xzok+8lLF/QhN2Y997Wb6MFyA+dQjfKMzu7APlSY34LOgiqnTEz3nv8JsBjXjIRNONMakNO82H8tlshmrJdAO3yMjXOn5SrVpRYfaQJ53paU+OpAfDd2niiR8O9fLCWeqga1SK0S+c1ws3E9O2VGfhG55gpMW5UHMraCcmJhoKBiDMm/cnF+dKq9xtwI0/mqh0kbtNGYCcLL7ZA==";
+    npx:hasSignatureTarget <https://w3id.org/np/RA3QeEArKrJhMi5hGQJwjizvDEPKnaM2wME9iuKItk_nE>;
+    npx:signedBy orcid:0000-0002-1784-2920 .
+}
