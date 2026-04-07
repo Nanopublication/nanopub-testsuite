@@ -1,0 +1,28 @@
+@prefix this: <http://example.org/mynanopub1#> .
+@prefix ng: <http://example.org/mynanopub1#ng/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix ex: <http://example.org/> .
+
+ng: {
+    this: a np:Nanopublication ;
+        np:hasAssertion ng: ;
+        np:hasProvenance ng: ;
+        np:hasPublicationInfo ng: .
+}
+
+ng: {
+    ex:mosquito ex:transmits ex:malaria .
+}
+
+ng: {
+    ng: prov:wasDerivedFrom <http://dx.doi.org/10.3233/ISU-2010-0613> .
+}
+
+ng: {
+    this: pav:createdBy <http://orcid.org/0000-0002-1267-0234> .
+    this: dc:created "2014-07-09T13:54:11+01:00"^^xsd:dateTime .
+}
