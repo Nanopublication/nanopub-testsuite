@@ -1,5 +1,5 @@
 @prefix this: <http://purl.org/nanopub/temp/1601763780/> .
-@prefix sub: <http://purl.org/nanopub/temp/1601763780/sub/> .
+@prefix sub: <http://purl.org/nanopub/1601763780/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
