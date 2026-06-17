@@ -1,0 +1,38 @@
+@prefix this: <https://w3id.org/np/RAXYq5rKz_YGb4SRnQGlLEXaG17mVIZNezkyme3n93HtU> .
+@prefix sub: <https://w3id.org/np/RAXYq5rKz_YGb4SRnQGlLEXaG17mVIZNezkyme3n93HtU/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix ex: <https://example.org/ns/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix orcid: <https://orcid.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+sub:Head {
+  this: a np:Nanopublication;
+    np:hasAssertion sub:assertion;
+    np:hasProvenance sub:provenance;
+    np:hasPublicationInfo sub:pubinfo .
+}
+
+sub:assertion {
+  ex:RAXYq5rKz_YGb4SRnQGlLEXaG17mVIZNezkyme3n93HtU a ex:Concept;
+    rdfs:label "a concept minted in a custom namespace" .
+}
+
+sub:provenance {
+  sub:assertion prov:wasAttributedTo orcid:0000-0002-1267-0234 .
+}
+
+sub:pubinfo {
+  this: dct:created "2024-09-18T11:19:06.183Z"^^xsd:dateTime;
+    dct:creator orcid:0000-0002-1267-0234;
+    npx:introduces ex:RAXYq5rKz_YGb4SRnQGlLEXaG17mVIZNezkyme3n93HtU .
+  
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyh/JXpQoR8t9THhrBraTIvPVnlky+1p/Cr1J3VpUtaslV/6j9qgHhGc92g1BZ93DnUmiB+peSAwmva/OWZXsKxuYOTeIGFqwtBv9V91WSoXGRK4SJGVbj6kVK15CPH2qjls29ZWzTwskyIm9u7Gpscm28TR81v+qCzDMTIWB2zQzn6DDcyFJ3zaCrwAc3DhbLtbteZaC56gHfKTPu/ko+gXbzXVvgOkgvUwa3HB7EBdDaxDiM9LpYidV72AUhIgIpFCkrZMWklSTDCKK9Gp6VnDe1Lzr7JZyFR1liA0C6DntX4ZtZOzL7XMTZIM+yseJ6MrdIwiaunBV1Nr3C08SFwIDAQAB";
+    npx:hasSignature "bElpBQhHiEquj3sypw54/LVYfjIYxWz706+twYR+floVqguD8M6NZUMZMPtpXTymXptnFmoyv5oOdkJdt3474J90xxM8tEAOccAAej9p+UkkD+PBclUt64AUMFO0ENwjDLdMVZ0uzFUC95Azarxw6/fgxfJLaYA/Y5w63nd9hdjAeUsBdtcdq505zCNBOI11vVI+FxfS6n7Dvtu7/NMshPg3O0pSafKedu1yY9qPSDF3ljWt33G2qIc7g7WIYZd82srlC6m9k0QG+B6kQdhnG+VTWaPU6SDY0/0gKDELpHHm5eIf44YR6UJPr3I8k6MrXynUvI3y2NiKwBJQcOxc7w==";
+    npx:hasSignatureTarget this:;
+    npx:signedBy orcid:0000-0000-0000-0000 .
+}
