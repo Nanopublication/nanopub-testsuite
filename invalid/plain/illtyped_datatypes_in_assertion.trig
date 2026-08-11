@@ -1,0 +1,35 @@
+@prefix this: <http://example.org/mynanopub1#> .
+@prefix ex: <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+this:Head {
+	this: np:hasAssertion this:assertion ;
+		np:hasProvenance this:provenance ;
+		np:hasPublicationInfo this:pubinfo ;
+		a np:Nanopublication .
+}
+
+this:assertion {
+	ex:mosquito
+		ex:hasWingCount "two"^^xsd:integer ;
+		ex:isVector "of course"^^xsd:boolean ;
+		ex:hasBodyLength "3,5"^^xsd:double ;
+		ex:wasFirstDescribedOn "1757-02-31"^^xsd:date ;
+		ex:hasObservationTime "25:61:00"^^xsd:time .
+}
+
+this:provenance {
+	this:assertion prov:wasDerivedFrom <http://dx.doi.org/10.3233/ISU-2010-0613> .
+}
+
+this:pubinfo {
+	this:
+		a npx:ExampleNanopub .
+		dc:created "2014-07-24T18:05:11+01:00"^^xsd:dateTime ;
+		pav:createdBy <http://orcid.org/0000-0000-0000-0001> ;
+}
