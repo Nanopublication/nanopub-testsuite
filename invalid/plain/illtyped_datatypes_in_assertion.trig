@@ -29,7 +29,7 @@ this:provenance {
 
 this:pubinfo {
 	this:
-		a npx:ExampleNanopub .
+		a npx:ExampleNanopub ;
 		dc:created "2014-07-24T18:05:11+01:00"^^xsd:dateTime ;
-		pav:createdBy <http://orcid.org/0000-0000-0000-0001> ;
+		pav:createdBy <http://orcid.org/0000-0000-0000-0001> .
 }
